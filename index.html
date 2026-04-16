@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Universal Agency</title>
+
+<style>
+
+/* ===== BODY BACKGROUND ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(270deg, #000000, #0b1f3a, #000000);
+    background-size: 600% 600%;
+    animation: bgMove 12s ease infinite;
+    color: white;
+    text-align: center;
+}
+
+@keyframes bgMove {
+    0% {background-position: 0%}
+    50% {background-position: 100%}
+    100% {background-position: 0%}
+}
+
+/* ===== FLOATING GLOW ===== */
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,200,255,0.3), transparent);
+    top: -150px;
+    left: -150px;
+    animation: moveGlow 10s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes moveGlow {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(250px,250px); }
+}
+
+/* ===== CARD ===== */
+.card {
+    max-width: 420px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 0 40px rgba(0,150,255,0.4);
+    animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ===== LOGO ===== */
+.logo {
+    width: 110px;
+    margin-bottom: 10px;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.08);}
+    100% {transform: scale(1);}
+}
+
+/* ===== TITLE ===== */
+h1 {
+    margin: 10px 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* ===== NAME ===== */
+.name {
+    font-size: 18px;
+    color: #00c6ff;
+    margin-bottom: 5px;
+}
+
+/* ===== TEXT ===== */
+p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    width: 90%;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00c6ff;
+}
+
+/* ===== SERVICES GRID ===== */
+.services {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.service-box {
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    background: rgba(0,150,255,0.3);
+}
+
+/* ===== QR ===== */
+.qr {
+    width: 130px;
+    margin-top: 15px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<!-- LOGO -->
+<img src="logo.png" class="logo">
+
+<!-- COMPANY -->
+<h1>Universal Agency</h1>
+
+<!-- PERSON -->
+<div class="name">Sarfe Alam</div>
+
+<p>Trusted Supplier & Business Partner</p>
+
+<p>
+Makhiza Tower, Main Road,<br>
+Ranchi – 834001
+</p>
+
+<!-- BUTTONS -->
+<a class="btn" href="tel:+919334702152">📞 Call Now</a>
+
+<a class="btn" href="https://wa.me/919334702152?text=Hi%20I%20need%20supply%20services">
+💬 WhatsApp
+</a>
+
+<a class="btn" href="https://maps.google.com/?q=Makhiza Tower Ranchi" target="_blank">
+📍 Location
+</a>
+
+<a class="btn" href="contact.vcf" download>
+📥 Save Contact
+</a>
+
+<!-- SERVICES -->
+<div class="services">
+
+<div class="service-box">📚 Books Supply</div>
+<div class="service-box">👕 Uniforms</div>
+<div class="service-box">🖊 Stationery</div>
+<div class="service-box">💻 IT Products</div>
+<div class="service-box">📱 Mobiles</div>
+<div class="service-box">🚗 Vehicle Spare</div>
+<div class="service-box">🪑 Furniture</div>
+<div class="service-box">🏗 Civil Works</div>
+
+</div>
+
+<!-- QR -->
+<img src="qr.png" class="qr">
+<p><b>Scan to Connect</b></p>
+
+<div class="footer">
+Powered by TeraCard 🚀
+</div>
+
+</div>
+
+</body>
+</html>
