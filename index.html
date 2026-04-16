@@ -6,7 +6,7 @@
 
 <title>Universal Agency</title>
 
-<!-- ✅ SOCIAL PREVIEW (VERY IMPORTANT) -->
+<!-- ✅ SOCIAL PREVIEW -->
 <meta name="title" content="Universal Agency - Sarfe Alam">
 <meta name="description" content="Supplier of Books, Uniforms, Stationery, IT Products, Mobiles & Civil Works in Ranchi">
 
@@ -23,7 +23,7 @@
 
 <style>
 
-/* ===== BODY BACKGROUND ===== */
+/* ===== BODY ===== */
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -40,7 +40,7 @@ body {
     100% {background-position: 0%}
 }
 
-/* ===== FLOATING GLOW ===== */
+/* ===== GLOW ===== */
 body::before {
     content: "";
     position: fixed;
@@ -125,6 +125,27 @@ p {
     box-shadow: 0 0 20px #00c6ff;
 }
 
+/* ===== SERVICES (NEW PREMIUM GRID) ===== */
+.services {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.service-box {
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.08);
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    background: rgba(0,150,255,0.3);
+}
+
 /* ===== FOOTER ===== */
 .footer {
     margin-top: 15px;
@@ -170,6 +191,16 @@ Ranchi – 834001
 <a class="btn" href="contact.vcf" download>
 📥 Save Contact
 </a>
+
+<!-- ✅ SERVICES SECTION -->
+<div class="services">
+<div class="service-box">📚 Books</div>
+<div class="service-box">👔 Uniform</div>
+<div class="service-box">✏️ Stationery</div>
+<div class="service-box">💻 IT Products</div>
+<div class="service-box">📱 Mobiles</div>
+<div class="service-box">🏗️ Civil Works</div>
+</div>
 
 <div class="footer">
 Powered by TeraCard 🚀
